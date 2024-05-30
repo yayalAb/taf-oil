@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record  id="transport_summery_form_view" model="ir.ui.view">
+           <field name="name">Transport Summery</field>
+           <field name="model">transport.summery</field>
+           <field name="arch" type="xml">
+               <form>
+                   <sheet>
+                        <group string="Transport Summery" class="form-title">
+                       <group>
+                            <field name="inv_no"/>
+                            <field name="fdc_no"/>
+                            <field name="loadin_date"/>
+                            <field name="src_dst"/>
+                            <field name="source"/>
+                            <field name="type_or_product"/>
+                            <field name="gravel_km"/>
+                            <field name="paved_km"/>
+                            <field name="cost_ltr"/>
+                       </group>
+                       <group>
+                            <field name="qty_at_20"/>
+                            <field name="gross_amount"/>
+                            <field name="lebu_birr"/>
+                            <field name="loss"/>
+                            <field name="destination"/>
+                            <field name="nat_pay"/>
+                            <field name="gravel_rate"/>
+                            <field name="paved_rate"/>
+                       </group>
+                       </group>
+                   </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
+                    </div>
+               </form>
+           </field>
+       </record>
+       <record  id="transport_summery_view_id" model="ir.ui.view">
+           <field name="name">Transport Summery</field>
+           <field name="model">transport.summery</field>
+           <field name="arch" type="xml">
+               <tree>
+                    <field name="inv_no"/>
+                    <field name="fdc_no"/>
+                    <field name="loadin_date"/>
+                    <field name="source"/>
+                    <field name="destination"/>
+                    <field name="type_or_product"/>
+                    <field name="gravel_km"/>
+                    <field name="gravel_rate"/>
+                    <field name="paved_km"/>
+                    <field name="paved_rate"/>
+                    <field name="cost_ltr"/>
+                    <field name="qty_at_20"/>
+                    <field name="gross_amount"/>
+                    <field name="lebu_birr"/>
+                    <field name="loss"/>
+                    <field name="nat_pay"/>
+               </tree>
+           </field>
+       </record>
+       <record id="transport_summery_action_id" model="ir.actions.act_window">
+           <field name="name">Transport Summery</field>
+           <field name="type">ir.actions.act_window</field>
+          <field name="res_model">transport.summery</field>
+           <field name="view_mode">tree,form</field>
+           <field name="type">ir.actions.act_window</field>
+       </record>
+</odoo>
