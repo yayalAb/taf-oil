@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 taf_oil.rode_type,access_frode_type,taf_oil.model_rode_type,base.group_system,1,1,1,1
 taf_oil.source_destination,access_source_destination,taf_oil.model_source_destination,base.group_system,1,1,1,1
 taf_oil.transport_summery,access_transport_summery,taf_oil.model_transport_summery,base.group_system,1,1,1,1
+taf_oil.product_type,access_product_type,taf_oil.model_product_type,base.group_system,1,1,1,1

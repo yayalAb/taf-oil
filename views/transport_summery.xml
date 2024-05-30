@@ -13,12 +13,13 @@
                             <field name="loadin_date"/>
                             <field name="src_dst"/>
                             <field name="source"/>
-                            <field name="type_or_product"/>
+                            <field name="type_of_product"/>
                             <field name="gravel_km"/>
                             <field name="paved_km"/>
                             <field name="cost_ltr"/>
                        </group>
                        <group>
+                            <field name="plate_no"/>
                             <field name="qty_at_20"/>
                             <field name="gross_amount"/>
                             <field name="lebu_birr"/>
@@ -45,10 +46,11 @@
                <tree>
                     <field name="inv_no"/>
                     <field name="fdc_no"/>
+                   <field name="plate_no"/>
                     <field name="loadin_date"/>
                     <field name="source"/>
                     <field name="destination"/>
-                    <field name="type_or_product"/>
+                    <field name="type_of_product"/>
                     <field name="gravel_km"/>
                     <field name="gravel_rate"/>
                     <field name="paved_km"/>

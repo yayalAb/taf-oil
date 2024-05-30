@@ -13,6 +13,7 @@
          'views/rode_type_view.xml',
          'views/source_destination.xml',
          'views/transport_summery.xml',
+         'views/product_type_view.xml',
          'views/menu.xml'
      ],
     'assets': {

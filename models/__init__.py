@@ -1,1 +1,1 @@
-from .import (rode_type, source_destination, tarnsport_summery)
+from .import (rode_type, source_destination, tarnsport_summery, product_type)

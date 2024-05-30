@@ -5,21 +5,27 @@
            sequence="11"
  />
 <menuitem  id="taf_oil_rode_type_menu_id"
-           name="Rode Type"
+           name="Road Type"
            parent="taf_oil_main_menu_id"
            sequence="1"
            action="rode_type_action_id"
- />\
+ />
+ <menuitem  id="taf_oil_product_type_menu_id"
+           name="Product Type"
+           parent="taf_oil_main_menu_id"
+           sequence="2"
+           action="product_type_action_id"
+ />
  <menuitem  id="taf_oil_source_destination_menu_id"
            name="Source Destination"
            parent="taf_oil_main_menu_id"
-           sequence="2"
+           sequence="3"
            action="source_destination_action_id"
  />
  <menuitem  id="taf_oil_transport_summery_menu_id"
-           name="Transport Summery"
+           name="Transport Summary"
            parent="taf_oil_main_menu_id"
-           sequence="3"
+           sequence="4"
            action="transport_summery_action_id"
  />
 </odoo>

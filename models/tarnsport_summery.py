@@ -12,10 +12,11 @@ class transportSummery(models.Model):
     fdc_no = fields.Char(string="FDC#", required=True)
     loadin_date = fields.Datetime(string="Loading Date", required=True)
     src_dst = fields.Many2one('source.destination', string='Source - Destination', tracking=True)
-    type_or_product = fields.Selection([
-        ('ago', 'AGO'),
-        ('mgr', 'MGR'),
-    ], string='Product Type', default='ago', required=True, tracking=True)
+    type_of_product = fields.Many2one('product.type', string='Product Type', tracking=True)
+    # type_or_product = fields.Selection([
+    #     ('ago', 'AGO'),
+    #     ('mgr', 'MGR'),
+    # ], string='Product Type', default='ago', required=True, tracking=True)
     gravel_km = fields.Float(string="Paved Km", compute="_compute_rate")
     gravel_rate = fields.Float(string="Paved Rate", compute="_compute_rate")
     paved_km = fields.Float(string="Gravel Km", compute="_compute_rate")
@@ -25,9 +26,10 @@ class transportSummery(models.Model):
     gross_amount = fields.Float(string="Gross Amount", compute='_compute_gross_amount')
     lebu_birr = fields.Float(string="Debit Note")
     loss = fields.Float(string="Loss(Birr)")
-    nat_pay = fields.Float(string="Nat Pay", compute='_compute_net_pay')
+    nat_pay = fields.Float(string="Net Pay", compute='_compute_net_pay')
     source = fields.Char(string="Source", compute='_compute_src_dest')
     destination = fields.Char(string="Destination", compute='_compute_src_dest')
+    plate_no = fields.Char(string="Plate No", required=True)
 
     @api.depends('src_dst')
     def _compute_rate(self):

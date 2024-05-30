@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<record  id="rode_type_form_view" model="ir.ui.view">
-           <field name="name">Rode Type</field>
-           <field name="model">rode.type</field>
+<record  id="product_type_form_view" model="ir.ui.view">
+           <field name="name">Product Type</field>
+           <field name="model">product.type</field>
            <field name="arch" type="xml">
                <form>
                    <sheet>
-                        <group string="Road Type" class="form-title">
+                        <group string="Product Type" class="form-title">
                        <group>
                             <field name="name"/>
                         </group>
                         <group>
-                             <field name="rate"/>
+                             <field name="description"/>
                        </group>
                        </group>
                    </sheet>
@@ -23,20 +23,20 @@
                </form>
            </field>
        </record>
-       <record  id="rode_type_view_id" model="ir.ui.view">
-           <field name="name">Road Type </field>
-           <field name="model">rode.type</field>
+       <record  id="product_type_view_id" model="ir.ui.view">
+           <field name="name">Product Type </field>
+           <field name="model">product.type</field>
            <field name="arch" type="xml">
                <tree>
                     <field name="name"/>
-                   <field name="rate"/>
+                   <field name="description"/>
                </tree>
            </field>
        </record>
-       <record id="rode_type_action_id" model="ir.actions.act_window">
-           <field name="name">Road Type</field>
+       <record id="product_type_action_id" model="ir.actions.act_window">
+           <field name="name">Product Type</field>
            <field name="type">ir.actions.act_window</field>
-          <field name="res_model">rode.type</field>
+          <field name="res_model">product.type</field>
            <field name="view_mode">tree,form</field>
            <field name="type">ir.actions.act_window</field>
        </record>
